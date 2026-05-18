@@ -132,52 +132,31 @@
 
 ---
 
-## 快速安装（复制给AI即可）
+## 快速安装
 
-### 一键安装命令
-
-**Claude Code 用户（复制给 Claude Code）：**
-```
-请帮我安装佛说skill：把 https://github.com/qzpthuhhu/foshuo/blob/main/foshuo-skill/SKILL.md 的内容保存到 ~/.claude/skills/foshuo/SKILL.md，同时把 https://github.com/qzpthuhhu/foshuo/blob/main/foshuo-skill/README.md 保存到 ~/.claude/skills/foshuo/README.md
-```
-
-**或者用 curl 命令（终端直接运行）：**
-```bash
-# 创建目录
-mkdir -p ~/.claude/skills/foshuo
-
-# 下载文件
-curl -o ~/.claude/skills/foshuo/SKILL.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/SKILL.md
-curl -o ~/.claude/skills/foshuo/README.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/README.md
-
-# 下载案例（可选）
-mkdir -p ~/.claude/skills/foshuo/cases
-curl -o ~/.claude/skills/foshuo/cases/01-cognitive-dichotomy.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/cases/01-cognitive-dichotomy.md
-# ... 其他案例同上
-
-# 下载参考资料（可选）
-mkdir -p ~/.claude/skills/foshuo/references
-curl -o ~/.claude/skills/foshuo/references/trigger-full-list.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/references/trigger-full-list.md
-curl -o ~/.claude/skills/foshuo/references/response-examples.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/references/response-examples.md
-```
-
-**OpenClaw 用户：**
-```bash
-mkdir -p ~/.agents/skills/foshuo
-curl -o ~/.agents/skills/foshuo/SKILL.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/SKILL.md
-curl -o ~/.agents/skills/foshuo/README.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/README.md
-```
-
-### 告诉AI安装（最简单的办法）
-
-把下面这段话复制给任何AI助手：
+### 复制这段话给AI（推荐）
 
 ```
-请帮我安装佛说skill：
+请帮我安装"佛说"skill：
+把 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md 保存到 ~/.claude/skills/foshuo/SKILL.md
+```
+
+或者加上README（推荐）：
+
+```
+请帮我安装"佛说"skill：
 1. 创建目录 ~/.claude/skills/foshuo/
-2. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md 下载 SKILL.md 到该目录
-3. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md 下载 README.md 到该目录
+2. 下载 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md 到该目录
+3. 下载 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md 到该目录
 ```
+
+### 终端一行命令
+
+```bash
+mkdir -p ~/.claude/skills/foshuo && curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md -o ~/.claude/skills/foshuo/SKILL.md && curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md -o ~/.claude/skills/foshuo/README.md
+```
+
+**OpenClaw 用户把 `~/.claude` 换成 `~/.agents`**
 
 ---
 
