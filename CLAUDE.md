@@ -7,22 +7,23 @@
 ## 目录结构
 
 ```
-foshuo-project/
+foshuo/
 ├── README.md           # 中文宣传版（访客看到）
 ├── README_en.md        # 英文宣传版
-├── CLAUDE.md          # 本文件，项目说明
-└── foshuo-skill/      # 实际skill
-    ├── SKILL.md       # AI读取的skill文件
-    ├── README.md      # 实用说明（给开发者）
-    ├── README_CN.md   # 中文宣传版
-    ├── cases/         # 12个经典案例
-    └── references/    # 触发词、响应示例
+├── SKILL.md            # AI skill核心文件（根目录，方便直接安装）
+├── CLAUDE.md           # 本文件，项目说明
+└── foshuo-skill/       # 完整skill源码
+    ├── SKILL.md        # 核心skill文件
+    ├── README.md       # 实用说明（给开发者）
+    ├── cases/          # 12个经典案例
+    └── references/     # 触发词、响应示例
 ```
 
-## 使用foshuo-skill
+## 直接安装
 
-克隆后，将 `foshuo-skill` 目录放到对应位置：
-- Claude Code: `~/.claude/skills/`
-- OpenClaw: `~/.agents/skills/`
+用户可以从根目录直接安装skill：
+```
+https://github.com/qzpthuhhu/foshuo/raw/main/SKILL.md
+```
 
-详细说明见 `foshuo-skill/README.md` 或 `foshuo-skill/SKILL.md`
+详细说明见 `foshuo-skill/README.md` 或 `SKILL.md`

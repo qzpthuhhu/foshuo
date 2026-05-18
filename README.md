@@ -141,19 +141,20 @@
 ```
 请帮我把佛说skill完整安装到本地：
 1. 在 ~/.claude/skills/ 下创建 foshuo 目录
-2. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/ 下载所有文件（SKILL.md、README.md）
-3. 下载 cases 目录下全部12个案例文件
-4. 下载 references 目录下的所有参考文件
+2. 从 https://github.com/qzpthuhhu/foshuo/raw/main/SKILL.md 下载 SKILL.md
+3. 从 https://github.com/qzpthuhhu/foshuo/raw/main/README.md 下载 README.md（可选）
+4. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/cases/ 下载12个案例文件
+5. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/references/ 下载参考文件
 ```
 
-### 终端命令（一键复制运行）
+### 终端命令
 
 ```bash
 mkdir -p ~/.claude/skills/foshuo/cases ~/.claude/skills/foshuo/references
 
 # 下载核心文件
-curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md -o ~/.claude/skills/foshuo/SKILL.md
-curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md -o ~/.claude/skills/foshuo/README.md
+curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/SKILL.md -o ~/.claude/skills/foshuo/SKILL.md
+curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/README.md -o ~/.claude/skills/foshuo/README.md
 
 # 下载12个案例文件
 for f in 01-cognitive-dichotomy 02-tech-debt-attachment 03-tool-alienation 04-systemic-failure 05-existential-meaning 06-deadline-anxiety 07-team-conflict 08-optimization-obsession 09-learning-anxiety 10-new-tech-dichotomy 11-failure-exhaustion 12-perfectionism-delay; do
