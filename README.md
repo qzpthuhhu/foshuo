@@ -136,24 +136,33 @@
 
 ### 复制这段话给AI（推荐）
 
-```
-请帮我安装"佛说"skill：
-把 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md 保存到 ~/.claude/skills/foshuo/SKILL.md
-```
-
-或者加上README（推荐）：
+把以下内容复制给任何AI助手，它会自动帮你安装：
 
 ```
-请帮我安装"佛说"skill：
-1. 创建目录 ~/.claude/skills/foshuo/
-2. 下载 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md 到该目录
-3. 下载 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md 到该目录
+请帮我把佛说skill完整安装到本地：
+1. 在 ~/.claude/skills/ 下创建 foshuo 目录
+2. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/ 下载所有文件（SKILL.md、README.md）
+3. 下载 cases 目录下全部12个案例文件
+4. 下载 references 目录下的所有参考文件
 ```
 
-### 终端一行命令
+### 终端命令（一键复制运行）
 
 ```bash
-mkdir -p ~/.claude/skills/foshuo && curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md -o ~/.claude/skills/foshuo/SKILL.md && curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md -o ~/.claude/skills/foshuo/README.md
+mkdir -p ~/.claude/skills/foshuo/cases ~/.claude/skills/foshuo/references
+
+# 下载核心文件
+curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md -o ~/.claude/skills/foshuo/SKILL.md
+curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md -o ~/.claude/skills/foshuo/README.md
+
+# 下载12个案例文件
+for f in 01-cognitive-dichotomy 02-tech-debt-attachment 03-tool-alienation 04-systemic-failure 05-existential-meaning 06-deadline-anxiety 07-team-conflict 08-optimization-obsession 09-learning-anxiety 10-new-tech-dichotomy 11-failure-exhaustion 12-perfectionism-delay; do
+  curl -sL "https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/cases/${f}.md" -o ~/.claude/skills/foshuo/cases/
+done
+
+# 下载参考资料
+curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/references/trigger-full-list.md -o ~/.claude/skills/foshuo/references/
+curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/references/response-examples.md -o ~/.claude/skills/foshuo/references/
 ```
 
 **OpenClaw 用户把 `~/.claude` 换成 `~/.agents`**
