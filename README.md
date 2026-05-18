@@ -132,6 +132,55 @@
 
 ---
 
+## 快速安装（复制给AI即可）
+
+### 一键安装命令
+
+**Claude Code 用户（复制给 Claude Code）：**
+```
+请帮我安装佛说skill：把 https://github.com/qzpthuhhu/foshuo/blob/main/foshuo-skill/SKILL.md 的内容保存到 ~/.claude/skills/foshuo/SKILL.md，同时把 https://github.com/qzpthuhhu/foshuo/blob/main/foshuo-skill/README.md 保存到 ~/.claude/skills/foshuo/README.md
+```
+
+**或者用 curl 命令（终端直接运行）：**
+```bash
+# 创建目录
+mkdir -p ~/.claude/skills/foshuo
+
+# 下载文件
+curl -o ~/.claude/skills/foshuo/SKILL.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/SKILL.md
+curl -o ~/.claude/skills/foshuo/README.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/README.md
+
+# 下载案例（可选）
+mkdir -p ~/.claude/skills/foshuo/cases
+curl -o ~/.claude/skills/foshuo/cases/01-cognitive-dichotomy.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/cases/01-cognitive-dichotomy.md
+# ... 其他案例同上
+
+# 下载参考资料（可选）
+mkdir -p ~/.claude/skills/foshuo/references
+curl -o ~/.claude/skills/foshuo/references/trigger-full-list.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/references/trigger-full-list.md
+curl -o ~/.claude/skills/foshuo/references/response-examples.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/references/response-examples.md
+```
+
+**OpenClaw 用户：**
+```bash
+mkdir -p ~/.agents/skills/foshuo
+curl -o ~/.agents/skills/foshuo/SKILL.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/SKILL.md
+curl -o ~/.agents/skills/foshuo/README.md https://raw.githubusercontent.com/qzpthuhhu/foshuo/main/foshuo-skill/README.md
+```
+
+### 告诉AI安装（最简单的办法）
+
+把下面这段话复制给任何AI助手：
+
+```
+请帮我安装佛说skill：
+1. 创建目录 ~/.claude/skills/foshuo/
+2. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/SKILL.md 下载 SKILL.md 到该目录
+3. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/README.md 下载 README.md 到该目录
+```
+
+---
+
 ## 佛学注解
 
 ### 缘起
@@ -181,47 +230,6 @@
 真诚地希望他人离苦得乐。
 
 应用到AI工作：先理解用户的真实需求，提供超越预期的价值，建设性地反馈。
-
----
-
-## 如何使用
-
-### 安装
-
-**Claude Code用户：**
-```bash
-将 `foshuo-skill` 目录放在 ~/.claude/skills/
-```
-
-**OpenClaw用户：**
-```bash
-将 `foshuo-skill` 目录放在 ~/.agents/skills/
-```
-
-### 触发方式
-
-1. **自动触发**：在上述触发场景中自动激活
-2. **手动调用**：在对话中提及触发词
-3. **Hook触发**：SessionStart/Stop时自动觉知/内观（需配置）
-
-### 跳过哲学
-
-如果您只想快速获得方案，说"跳过"、"直接给方案"，佛说会立即返回工具模式。
-
----
-
-## 响应风格
-
-### 应该有的风格
-- 平静、温和的语气
-- 承认不确定性："可能"、"也许"、"不一定"
-- 多视角呈现："从A角度看...从B角度看..."
-- 引导性而非命令式
-
-### 应该避免的
-- "很简单"、"一眼就能看出"
-- "肯定是这样"、"毫无疑问"
-- 宗教说教、空泛的哲学
 
 ---
 
