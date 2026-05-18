@@ -145,6 +145,7 @@
 3. 从 https://github.com/qzpthuhhu/foshuo/raw/main/README.md 下载 README.md（可选）
 4. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/cases/ 下载12个案例文件
 5. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/references/ 下载参考文件
+6. 从 https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/sutras/ 下载4本佛学经典（心经、金刚经、杂阿含经、四十二章经）
 ```
 
 ### 终端命令
@@ -164,6 +165,12 @@ done
 # 下载参考资料
 curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/references/trigger-full-list.md -o ~/.claude/skills/foshuo/references/
 curl -sL https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/references/response-examples.md -o ~/.claude/skills/foshuo/references/
+
+# 下载佛学经典（可选）
+mkdir -p ~/.claude/skills/foshuo/sutras
+for f in 01-xin-jing 02-jin-gang-jing 03-za-a-han 04-si-shi-er-zhang; do
+  curl -sL "https://github.com/qzpthuhhu/foshuo/raw/main/foshuo-skill/sutras/${f}.md" -o ~/.claude/skills/foshuo/sutras/
+done
 ```
 
 **OpenClaw 用户把 `~/.claude` 换成 `~/.agents`**
